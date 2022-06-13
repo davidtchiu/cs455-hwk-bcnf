@@ -22,11 +22,12 @@ public class Normalizer {
     // TODO - Identify a nontrivial FD that violates BCNF. Split the relation's
     // attributes using that FD, as seen in class.
 
-    // TODO - Redistribute the FDs to the two new relations (R_Left and R_Right) as
-    // follows:
-    // Iterate through current set of FDs, then union all attributes appearing in
-    // the FD, and test if the union is a subset of the R_Left (or R_Right)
-    // relation. If so, then the FD gets added to the R_Left's (or R_Right's) FD
+    // TODO - Redistribute the FDs in the closure of fdset to the two new
+    // relations (R_Left and R_Right) as follows:
+    //
+    // Iterate through closure of the given set of FDs, then union all attributes
+    // appearing in the FD, and test if the union is a subset of the R_Left (or
+    // R_Right) relation. If so, then the FD gets added to the R_Left's (or R_Right's) FD
     // set. If the union is not a subset of either new relation, then the FD is
     // discarded
 
